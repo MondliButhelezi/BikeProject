@@ -18,6 +18,7 @@ public class BikeRideOne implements BikeRide {
         this.bicycle.brake();
         this.bicycle.brake();
         this.bicycle.accelerate();
+        this.bicycle.accelerate();
     }
 
     public int currentSpeed() {
