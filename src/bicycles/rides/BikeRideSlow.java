@@ -16,9 +16,8 @@ public class BikeRideSlow implements BikeRide {
         this.bicycle.brake();
         this.bicycle.accelerate();
         this.bicycle.brake();
-        this.bicycle.accelerate();
         this.bicycle.brake();
-        this.bicycle.accelerate();
+        this.bicycle.brake();
     }
 
     public int currentSpeed() {
