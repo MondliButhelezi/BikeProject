@@ -25,6 +25,7 @@ public class FunRide {
             System.out.println("You have reached the maximum of rides allowed, please try again later.");
         } else {
             this.BicycleList.add(getBicycle);
+            System.out.println("You have added another bicycle type");
         }
     }
 
