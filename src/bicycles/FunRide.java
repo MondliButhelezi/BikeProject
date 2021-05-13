@@ -14,23 +14,21 @@ public class FunRide {
 
     // An array list that has roadBike, mountainBike and tandem.
     // This list is created by methods stored in BicycleType enum.
-    private List<String> BicycleList = new ArrayList<>();
+    private List<Bicycle> BicycleList = new ArrayList<Bicycle>();
 
-    public void accept(BicycleType bikeType) { // accepts number of bikes that will go for a ride.
-        String getBicycle = bikeType.getBikeRideType();
+    public void accept(Bicycle bicycle) { // accepts number of bikes that will go for a ride.
         // getBicycle enables to use the method from BicycleType enum to...
         // ...be used inside the accept method, and enables addition to the BicycleList.
 
-        if (BicycleList.size() >= maxAllowedRides) {
+        if (BicycleList.size() >= maxAllowedRides ) {
             System.out.println("You have reached the maximum of rides allowed, please try again later.");
         } else {
-            this.BicycleList.add(getBicycle);
-            System.out.println("You have added another bicycle type");
-        }
+                BicycleList.add(bicycle);
+                System.out.println("You have added a bike ride to the bicycle list.");
+            }
     }
 
     public int getEnteredCount(BicycleType tandem) { // counts the number of bikes that have entered the ride and returns the number.
-        System.out.println("The number of bikes that have entered rides is " + BicycleList.size());
         return BicycleList.size();
     }
 
@@ -38,8 +36,9 @@ public class FunRide {
         int rideCount = 0;
         String getBicycle = bikeType.getBikeRideType();
 
-        for (int bike=0; bike < BicycleList.size(); bike++) {
-            if (BicycleList.get(bike) == getBicycle) {
+        for (Bicycle bike : BicycleList) {
+//            System.out.println(bike.bicycle().getBikeRideType());
+            if (bike.bicycle().getBikeRideType() == getBicycle) {
                 rideCount++;
             }
         }

@@ -3,7 +3,7 @@ package bicycles;
 public enum BicycleType {
     ROADBIKE("ROADBIKE"),
     MOUNTAINBIKE("MOUNTAINBIKE"),
-    TANDEM("MOUNTAINBIKE");
+    TANDEM("TANDEM");
 
     // Methods below will be used as parameters of the three enums properties above.
 
